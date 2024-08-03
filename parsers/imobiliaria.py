@@ -1,60 +1,63 @@
-from xml.dom.minidom import parse
 import json
 
-dom = parse("xsd/imobiliaria/imobiliaria.xml")
-imobiliaria = dom.documentElement
-imoveis = imobiliaria.getElementsByTagName("imovel")
-
-data = {"imoveis": []}
-
+# Importar de um arquivo
+with open('parsers/imobiliaria.json', encoding='utf-8') as json_file:
+    parsed_data = json.load(json_file)
+    
+imoveis = parsed_data["imoveis"]
+id_imovel = 1
 for imovel in imoveis:
-    descricao = imovel.getElementsByTagName("descricao")[0].firstChild.nodeValue
-    
-    nome_proprietario = imovel.getElementsByTagName("nome")[0].firstChild.nodeValue
-    telefones_proprietario = imovel.getElementsByTagName("telefone")
-    telefones = [tel.firstChild.nodeValue for tel in telefones_proprietario]
-    
-    emails_proprietario = imovel.getElementsByTagName("email")
-    emails = [email.firstChild.nodeValue for email in emails_proprietario]
+    print(f"Imóvel {id_imovel}")
+    id_imovel += 1
 
-    rua = imovel.getElementsByTagName("rua")[0].firstChild.nodeValue
-    bairro = imovel.getElementsByTagName("bairro")[0].firstChild.nodeValue
-    cidade = imovel.getElementsByTagName("cidade")[0].firstChild.nodeValue
-    numero = imovel.getElementsByTagName("numero")[0].firstChild.nodeValue
-    
-    tamanho = float(imovel.getElementsByTagName("tamanho")[0].firstChild.nodeValue)
-    numQuartos = int(imovel.getElementsByTagName("numQuartos")[0].firstChild.nodeValue)
-    numBanheiros = int(imovel.getElementsByTagName("numBanheiros")[0].firstChild.nodeValue)
-    
-    valor = float(imovel.getElementsByTagName("valor")[0].firstChild.nodeValue)
+print("")
+print("="*30)   
+id_selecionado = int(input("Para mais informações, digite o ID do imóvel: ")) 
+imovel = imoveis[id_selecionado - 1]
 
-    # Dicionário com a estrutura do JSON
-    data["imoveis"].append({
-        "descricao": descricao,
-        "proprietario": {
-            "nome": nome_proprietario,
-            "telefone": telefones,
-            "email": emails
-        },
-        "endereco": {
-            "rua": rua,
-            "bairro": bairro,
-            "cidade": cidade,
-            "numero": numero,
-        },
-        "caracteristicas": {
-            "tamanho": tamanho,
-            "numQuartos": numQuartos,
-            "numBanheiros": numBanheiros
-        },
-        "valor": valor
-    })
+descricao = imovel["descricao"]
+proprietario = imovel["proprietario"]
+tel_proprietario = proprietario["telefone"]
+email_proprietario = proprietario["email"]
+endereco = imovel["endereco"]
+caracteristicas = imovel["caracteristicas"]
+valor = imovel["valor"]
 
-# Gera o arquivo JSON
-with open("parsers/imobiliaria.json", "w", encoding='utf-8') as json_file:
-    json.dump(data, json_file, ensure_ascii=False, indent=2)
+print("="*30)
+print("****** Descrição: ******")
+print(descricao)
+print("")
 
+print("****** Proprietário(a): ******")
+print(f"  - {proprietario["nome"]}")
+print("")
 
+print("****** Tel.: ******")
+# Indentar números de telefone
+for tel in tel_proprietario:
+    print(f"  - {tel}")
+print("")
 
+print("****** Email: ******")
+# Indentar e-mails
+for email in email_proprietario:
+    print(f"  - {email}")
+print("")
 
+print("****** Endereço: ******")
+print(f"   Rua: {endereco["rua"]}")
+print(f"   Bairro: {endereco["bairro"]}")
+print(f"   Cidade: {endereco["cidade"]}")
+print(f"   N°: {endereco["numero"]}")
+print("")
+
+print("****** Características: ******")
+print(f"  Tamanho: {caracteristicas["tamanho"]} m^2")
+print(f"  N° de quartos: {caracteristicas["numQuartos"]}")
+print(f"  N° de banheiros: {caracteristicas["numBanheiros"]}")
+print("")
+
+print(f"****** Valor: R$ {valor} ******")
+
+print("="*30)
 
