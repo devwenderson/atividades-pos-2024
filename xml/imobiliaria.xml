@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE imobiliaria [
+<!ELEMENT imobiliaria (imovel+)>
+<!ELEMENT imovel (descricao, proprietario, endereco, caracteristicas, valor)>
+<!ATTLIST imovel id ID #REQUIRED>
+<!ELEMENT descricao (#PCDATA)>
+
+<!ELEMENT proprietario (nome, (email|telefone)+)>
+<!ELEMENT nome (#PCDATA) >
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT telefone (#PCDATA)>
+
+<!ELEMENT endereco (rua, bairro, cidade, numero?)>
+<!ELEMENT rua (#PCDATA)>
+<!ELEMENT bairro (#PCDATA)>
+<!ELEMENT cidade (#PCDATA)>
+<!ELEMENT numero (#PCDATA)>
+
+<!ELEMENT caracteristicas (tamanho, numQuartos+, numBanheiros+)>
+<!ELEMENT tamanho (#PCDATA)>
+<!ATTLIST tamanho medida (metros) #REQUIRED>
+<!ELEMENT numQuartos (#PCDATA)>
+<!ELEMENT numBanheiros (#PCDATA)>
+
+<!ELEMENT valor (#PCDATA)>
+<!ATTLIST valor moeda (brl) #REQUIRED>
+
+]>
+
+<imobiliaria>
+    <imovel id="i1">
+        <descricao>Casa azul</descricao>
+        <proprietario>
+            <nome>Wenderson</nome>
+            <email>wenderson@gmail.com</email>
+            <telefone>(12) 3456-7890</telefone>
+            <telefone>(12) 3456-7890</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Rua Janeiro</rua>
+            <bairro>Centro</bairro>
+            <cidade>Bom Cristo</cidade>
+            <numero></numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho medida="metros">10</tamanho>
+            <numQuartos>2</numQuartos>
+            <numBanheiros>4</numBanheiros>
+        </caracteristicas>
+        <valor moeda="brl">20000</valor>
+    </imovel>
+
+    <imovel id="i2">
+        <descricao>Casa azul</descricao>
+        <proprietario>
+            <nome>Wenderson</nome>
+            <email>wenderson@gmail.com</email>
+            <telefone>(12) 3456-7890</telefone>
+            <telefone>(12) 3456-7890</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Rua Fevereiro</rua>
+            <bairro>Bairo Feve</bairro>
+            <cidade>Bom Cristo</cidade>
+            <numero>07</numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho medida="metros">8</tamanho>
+            <numQuartos>2</numQuartos>
+            <numBanheiros>4</numBanheiros>
+        </caracteristicas>
+
+        <valor moeda="brl">35000</valor>
+    </imovel>
+
+    <imovel id="i3">
+        <descricao>Chalé nas montanhas</descricao>
+        <proprietario>
+            <nome>Fernanda Souza</nome>
+            <email>fernanda.souza@example.com</email>
+            <telefone>(31) 8765-4321</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Travessa das Estrelas</rua>
+            <bairro>Vila Aurora</bairro>
+            <cidade>Belém</cidade>
+            <numero>789</numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho medida="metros">80</tamanho>
+            <numQuartos>2</numQuartos>
+            <numBanheiros>1</numBanheiros>
+        </caracteristicas>
+        <valor moeda="brl">180000</valor>
+    </imovel>
+
+    <imovel id="i4">
+        <descricao>Loft urbano</descricao>
+        <proprietario>
+            <nome>Marcos Oliveira</nome>
+            <email>marcos.oliveira@example.com</email>
+            <telefone>(51) 2345-6789</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Rua das Palmeiras</rua>
+            <bairro>Vila Nova</bairro>
+            <cidade>Porto Alegre</cidade>
+            <numero>234</numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho medida="metros">60</tamanho>
+            <numQuartos>1</numQuartos>
+            <numBanheiros>1</numBanheiros>
+        </caracteristicas>
+        <valor moeda="brl">120000</valor>
+    </imovel>
+
+    <imovel id="i5">
+        <descricao>Kitnet mobiliada</descricao>
+        <proprietario>
+            <nome>Patrícia Costa</nome>
+            <email>patricia.costa@example.com</email>
+            <telefone>(41) 5678-1234</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Alameda das Acácias</rua>
+            <bairro>Jardim Botânico</bairro>
+            <cidade>Curitiba</cidade>
+            <numero>789</numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho medida="metros">40</tamanho>
+            <numQuartos>1</numQuartos>
+            <numBanheiros>1</numBanheiros>
+        </caracteristicas>
+        <valor moeda="brl">90000</valor>
+    </imovel>
+        
+</imobiliaria>

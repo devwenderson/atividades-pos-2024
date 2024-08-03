@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cardapio SYSTEM "definicoes.dtd">
+
+<cardapio>
+    <prato id="P01">
+        <nome>Hambúrguer de siri</nome>
+        <descricao>Hambúrguer feito de siri</descricao>
+        <ingredientes>
+            <ingrediente>Siri</ingrediente>
+        </ingredientes>
+        <preco moeda="BRL">&reais; 10,00</preco>
+        <tempoPreparo>10 minutos</tempoPreparo>
+        <calorias>94 kcal</calorias>
+    </prato>
+
+    <prato id="P02">
+        <nome>Siri de hambúrguer</nome>
+        <descricao>Siri feito de hambúrguer</descricao>
+        <ingredientes>
+            <ingrediente>Hambúrguer</ingrediente>
+        </ingredientes>
+        <preco moeda="BRL">&reais; 17,00</preco>
+        <tempoPreparo>20 minutos</tempoPreparo>
+        <calorias>49 kcal</calorias>
+    </prato>
+
+    <prato id="P03">
+        <nome>Chocolate de ovo</nome>
+        <descricao>Não é chocolate</descricao>
+        <ingredientes>
+            <ingrediente>Ovo</ingrediente>
+        </ingredientes>
+        <preco moeda="BRL">&reais; 12,50</preco>
+        <tempoPreparo>30 minutos</tempoPreparo>
+        <calorias>68 kcal</calorias>
+    </prato>
+
+    <prato id="P04">
+        <nome>Lasanha de chocolate</nome>
+        <descricao>É lasanha</descricao>
+        <ingredientes>
+            <ingrediente>Chocolate</ingrediente>
+            <ingrediente>frango</ingrediente>
+        </ingredientes>
+        <preco moeda="BRL">&reais; 25,00</preco>
+        <tempoPreparo>40 minutos</tempoPreparo>
+        <calorias>400 kcal</calorias>
+    </prato>
+
+    <prato id="P05">
+        <nome>Feijão com calabresa</nome>
+        <descricao>É feijão</descricao>
+        <ingredientes>
+            <ingrediente>Feijão</ingrediente>
+            <ingrediente>calabresa</ingrediente>
+            <ingrediente>água</ingrediente>
+        </ingredientes>
+        <preco moeda="BRL">&reais; 30,00</preco>
+        <tempoPreparo>50 minutos</tempoPreparo>
+        <calorias>130 kcal</calorias>
+    </prato>
+</cardapio>
