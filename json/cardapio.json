@@ -1,0 +1,46 @@
+{
+    "cardapio":
+    [
+        {
+            "id": 1,
+            "nome": "Bife à Parmegiana",
+            "descricao": "Bife empanado, coberto com molho de tomate e queijo, servido com arroz e fritas.",
+            "ingredientes": [
+                "Bife de Alcatra",
+                "Farinha de Rosca",
+                "Ovo",
+                "Queijo Mussarela",
+                "Molho de Tomate",
+                "Arroz",
+                "Batata Frita"
+            ],
+            "preco": 25.00,
+            "calorias": 300,
+            "tempoPreparo": "30 minutos"
+        },
+        {
+            "id": 2,
+            "nome": "Bife à carne",
+            "descricao": "Bife feito à carne",
+            "ingredientes": [
+                "Bife",
+                "Carne"
+            ],
+            "preco": 70.00,
+            "calorias": 400,
+            "tempoPreparo": "30 minutos"
+        },
+        {
+            "id": 3,
+            "nome": "Bife à Pressão",
+            "descricao": "Feito com muita pressão",
+            "ingredientes": [
+                "Bife de Alcatra",
+                "Panela de pressão"
+            ],
+            "preco": 10.00,
+            "calorias": 1000,
+            "tempoPreparo": "10 minutos"
+        }
+    ]
+}

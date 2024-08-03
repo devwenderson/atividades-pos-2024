@@ -1,0 +1,155 @@
+{
+    "quiz": [
+        {
+            "disciplina": "Matemática",
+            "professor": {
+                "nome": "João Silva",
+                "matricula": "12345"
+            },
+            "turma": "2A",
+            "data": "2024-08-01",
+            "questoes": [
+                {
+                    "questao": {
+                        "enunciado": "Qual é o valor de 2 + 2?",
+                        "pontuacao": 2,
+                        "alternativas": [
+                            {
+                                "alternativa": "3",
+                                "correta": false
+                            },
+                            {
+                                "alternativa": "5",
+                                "correta": false
+                            },
+                            {
+                                "alternativa": "4",
+                                "correta": true
+                            },
+                            {
+                                "alternativa": "6",
+                                "correta": false
+                            },
+                            {
+                                "alternativa": "7",
+                                "correta": false
+                            }
+                        ]
+                    }
+                },
+                {
+                    "questao": {
+                        "enunciado": "Qual é a derivada de x^2?",
+                        "pontuacao": 3,
+                        "alternativas": [
+                            {
+                                "alternativa": "x",
+                                "correta": false
+                            },
+                            {
+                                "alternativa": "2x",
+                                "correta": true
+                            },
+                            {
+                                "alternativa": "x^2",
+                                "correta": false
+                            },
+                            {
+                                "alternativa": "1",
+                                "correta": false
+                            },
+                            {
+                                "alternativa": "0",
+                                "correta": false
+                            }
+                        ]
+                    }
+                },
+                {
+                    "questao": {
+                        "enunciado": "Qual é a capital da França?",
+                        "pontuacao": 1,
+                        "alternativas": [
+                            {
+                                "alternativa": "Roma",
+                                "correta": false
+                            },
+                            {
+                                "alternativa": "Paris",
+                                "correta": true
+                            },
+                            {
+                                "alternativa": "Londres",
+                                "correta": false
+                            },
+                            {
+                                "alternativa": "Berlim",
+                                "correta": false
+                            },
+                            {
+                                "alternativa": "Madrid",
+                                "correta": false
+                            }
+                        ]
+                    }
+                },
+                {
+                    "questao": {
+                        "enunciado": "Quem escreveu 'Dom Quixote'?",
+                        "pontuacao": 2,
+                        "alternativas": [
+                            {
+                                "alternativa": "Gabriel García Márquez",
+                                "correta": false
+                            },
+                            {
+                                "alternativa": "Miguel de Cervantes",
+                                "correta": true
+                            },
+                            {
+                                "alternativa": "Jorge Luis Borges",
+                                "correta": false
+                            },
+                            {
+                                "alternativa": "Pablo Neruda",
+                                "correta": false
+                            },
+                            {
+                                "alternativa": "Julio Cortázar",
+                                "correta": false
+                            }
+                        ]
+                    }
+                },
+                {
+                    "questao": {
+                        "enunciado": "Qual é o maior planeta do Sistema Solar?",
+                        "pontuacao": 2,
+                        "alternativas": [
+                            {
+                                "alternativa": "Terra",
+                                "correta": false
+                            },
+                            {
+                                "alternativa": "Vênus",
+                                "correta": false
+                            },
+                            {
+                                "alternativa": "Júpiter",
+                                "correta": true
+                            },
+                            {
+                                "alternativa": "Saturno",
+                                "correta": false
+                            },
+                            {
+                                "alternativa": "Marte",
+                                "correta": false
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

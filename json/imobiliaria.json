@@ -1,0 +1,105 @@
+{
+    "imobiliaria":
+    [
+        {
+            "descricao": "Apartamento moderno com varanda e vista para o mar.",
+            "proprietario": {
+                "nome": "Carlos Souza",
+                "telefone": "+55 11 99999-0000",
+                "email": "carlos.souza@example.com"
+            },
+            "endereco": {
+                "rua": "Avenida Atlântica",
+                "bairro": "Copacabana",
+                "cidade": "Rio de Janeiro",
+                "numero": 1234
+            },
+            "caracteristicas": {
+                "tamanho": 120,
+                "numQuartos": 3,
+                "numBanheiros": 2
+            },
+            "valor": 950000
+        },
+        {
+            "descricao": "Casa térrea espaçosa com jardim e piscina.",
+            "proprietario": {
+                "nome": "Ana Ferreira",
+                "telefone": "+55 21 98888-7777",
+                "email": "ana.ferreira@example.com"
+            },
+            "endereco": {
+                "rua": "Rua das Flores",
+                "bairro": "Jardim Botânico",
+                "cidade": "São Paulo",
+                "numero": 456
+            },
+            "caracteristicas": {
+                "tamanho": 300,
+                "numQuartos": 4,
+                "numBanheiros": 3
+            },
+            "valor": 1800000
+        },
+        {
+            "descricao": "Apartamento aconchegante próximo ao centro da cidade.",
+            "proprietario": {
+                "nome": "Luiz Silva",
+                "telefone": "+55 31 97777-6666",
+                "email": "luiz.silva@example.com"
+            },
+            "endereco": {
+                "rua": "Rua Central",
+                "bairro": "Centro",
+                "cidade": "Belo Horizonte",
+                "numero": 789
+            },
+            "caracteristicas": {
+                "tamanho": 80,
+                "numQuartos": 2,
+                "numBanheiros": 1
+            },
+            "valor": 400000
+        },
+        {
+            "descricao": "Cobertura duplex com área gourmet e vista panorâmica.",
+            "proprietario": {
+                "nome": "Fernanda Oliveira",
+                "telefone": "+55 21 95555-4444",
+                "email": "fernanda.oliveira@example.com"
+            },
+            "endereco": {
+                "rua": "Avenida Paulista",
+                "bairro": "Bela Vista",
+                "cidade": "São Paulo",
+                "numero": 1010
+            },
+            "caracteristicas": {
+                "tamanho": 250,
+                "numQuartos": 4,
+                "numBanheiros": 4
+            },
+            "valor": 3200000
+        },
+        {
+            "descricao": "Chácara com ampla área verde e lago artificial.",
+            "proprietario": {
+                "nome": "Roberto Mendes",
+                "telefone": "+55 41 94444-3333",
+                "email": "roberto.mendes@example.com"
+            },
+            "endereco": {
+                "rua": "Estrada do Lago",
+                "bairro": "Zona Rural",
+                "cidade": "Curitiba",
+                "numero": 12
+            },
+            "caracteristicas": {
+                "tamanho": 5000,
+                "numQuartos": 5,
+                "numBanheiros": 5
+            },
+            "valor": 2500000
+        }
+    ]    
+}
