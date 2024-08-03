@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz xmlns="http://quiz.org"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://quiz.org quiz.xsd">
+
+    <disciplina>Programação orientada a serviços</disciplina>
+    <professor>
+        <nome>Diego Cirilo</nome>
+        <matricula>918391013</matricula>
+    </professor>
+    <turma>Informática para internet 4V</turma>
+    <data>19/07/2024</data>
+    <questoes>
+        <questao>
+            <enunciado>O que é um serviço RESTful?</enunciado>
+            <pontuacao>1.0</pontuacao>
+            <alternativas>
+                <alternativa correta="nao">Um serviço que utiliza o protocolo SOAP para comunicação.</alternativa>
+                <alternativa correta="nao">Um serviço que segue os princípios de orientação a objetos.</alternativa>
+                <alternativa correta="nao">Um serviço que usa a arquitetura cliente-servidor.</alternativa>
+                <alternativa correta="sim">Um serviço que adere às restrições definidas pela arquitetura REST.</alternativa>
+            </alternativas>
+        </questao>
+        
+        <questao>
+            <enunciado>Qual é o principal benefício de um serviço baseado em arquitetura SOA (Service-Oriented Architecture)?</enunciado>
+            <pontuacao>1.0</pontuacao>
+            <alternativas>
+                <alternativa correta="nao">Acoplamento forte entre os componentes.</alternativa>
+                <alternativa correta="sim">Reutilização de serviços e interoperabilidade.</alternativa>
+                <alternativa correta="nao">Implementação monolítica de sistemas.</alternativa>
+                <alternativa correta="nao">Dependência exclusiva de protocolos proprietários.</alternativa>
+            </alternativas>
+        </questao>
+
+        <questao>
+            <enunciado>Em um serviço web RESTful, qual método HTTP é comumente utilizado para uma operação de criação?</enunciado>
+            <pontuacao>1.0</pontuacao>
+            <alternativas>
+                <alternativa correta="nao">GET</alternativa>
+                <alternativa correta="sim">POST</alternativa>
+                <alternativa correta="nao">DELETE</alternativa>
+                <alternativa correta="nao">PUT</alternativa>
+            </alternativas>
+        </questao>
+
+        <questao>
+            <enunciado>Qual é uma característica fundamental dos serviços web baseados em SOAP (Simple Object Access Protocol)?</enunciado>
+            <pontuacao>1.0</pontuacao>
+            <alternativas>
+                <alternativa correta="sim">Uso exclusivo de XML para troca de mensagens.</alternativa>
+                <alternativa correta="nao">Utilização apenas do método GET para operações.</alternativa>
+                <alternativa correta="nao">Restrição ao uso de autenticação via HTTP.</alternativa>
+                <alternativa correta="nao">Ausência de suporte a diferentes formatos de dados.</alternativa>
+            </alternativas>
+        </questao>
+
+        <questao>
+            <enunciado>Qual é o objetivo principal da utilização de contratos de serviço em uma arquitetura orientada a serviços?</enunciado>
+            <pontuacao>1.0</pontuacao>
+            <alternativas>
+                <alternativa correta="nao">Estabelecer o preço dos serviços oferecidos.</alternativa>
+                <alternativa correta="sim">Documentar as interfaces e os requisitos dos serviços.</alternativa>
+                <alternativa correta="nao">Restringir o acesso aos serviços apenas a usuários internos.</alternativa>
+                <alternativa correta="nao">Implementar políticas de segurança específicas para cada serviço.</alternativa>
+            </alternativas>
+        </questao>
+    </questoes>
+</quiz>

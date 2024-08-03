@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cardapio xmlns="http://cardapio.org"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://cardapio.org cardapio.xsd">
+
+    <prato id="1">
+        <nome>Hambúguer</nome>
+        <descricao>Feito especialmente para você comer</descricao>
+        <ingredientes>
+            <ingrediente>Hambúrguer</ingrediente>
+            <ingrediente>1 ovo</ingrediente>
+            <ingrediente>2 fatias de tomate</ingrediente>
+            <ingrediente>1 folha de alface</ingrediente>
+            <ingrediente>presunto</ingrediente>
+            <ingrediente>queijo à gosto</ingrediente>
+        </ingredientes>
+        <preco>5.00</preco>
+        <calorias>125</calorias>
+        <tempoPreparo>30 minutos</tempoPreparo>
+    </prato>
+
+    <prato id="2">
+        <nome>Risotto de Cogumelos</nome>
+        <descricao>Risoto cremoso preparado com uma variedade de cogumelos frescos e parmesão.</descricao>
+        <ingredientes>
+            <ingrediente>Arroz para risoto</ingrediente>
+            <ingrediente>Cogumelos</ingrediente>
+            <ingrediente>Caldo de legumes</ingrediente>
+            <ingrediente>Queijo parmesão</ingrediente>
+            <ingrediente>Manteiga</ingrediente>
+            <ingrediente>Cebola</ingrediente>
+            <ingrediente>Alho</ingrediente>
+            <ingrediente>Vinho branco</ingrediente>
+        </ingredientes>
+        <preco>30.00</preco>
+        <calorias>480</calorias>
+        <tempoPreparo>35 minutos</tempoPreparo>
+    </prato>
+    
+    <prato id="3">
+        <nome>Salmão Grelhado com Aspargos</nome>
+        <descricao>Salmão grelhado servido com aspargos frescos e molho de manteiga com limão.</descricao>
+        <ingredientes>
+            <ingrediente>Salmão</ingrediente>
+            <ingrediente>Aspargos</ingrediente>
+            <ingrediente>Manteiga</ingrediente>
+            <ingrediente>Limão</ingrediente>
+            <ingrediente>Alho</ingrediente>
+            <ingrediente>Sal</ingrediente>
+            <ingrediente>Pimenta</ingrediente>
+        </ingredientes>
+        <preco>40.00</preco>
+        <calorias>500</calorias>
+        <tempoPreparo>25 minutos</tempoPreparo>
+    </prato>
+    
+    <prato id="4">
+        <nome>Frango ao Curry</nome>
+        <descricao>Frango cozido em um molho cremoso de curry com leite de coco e especiarias.</descricao>
+        <ingredientes>
+            <ingrediente>Frango</ingrediente>
+            <ingrediente>Leite de coco</ingrediente>
+            <ingrediente>Curry em pó</ingrediente>
+            <ingrediente>Cebola</ingrediente>
+            <ingrediente>Alho</ingrediente>
+            <ingrediente>Gengibre</ingrediente>
+            <ingrediente>Coentro</ingrediente>
+            <ingrediente>Sal</ingrediente>
+            <ingrediente>Pimenta</ingrediente>
+        </ingredientes>
+        <preco>35.00</preco>
+        <calorias>550</calorias>
+        <tempoPreparo>30 minutos</tempoPreparo>
+    </prato>
+    
+    <prato id="5">
+        <nome>Salada Caesar</nome>
+        <descricao>Salada clássica com alface romana, croutons, queijo parmesão e molho Caesar.</descricao>
+        <ingredientes>
+            <ingrediente>Alface romana</ingrediente>
+            <ingrediente>Croutons</ingrediente>
+            <ingrediente>Queijo parmesão</ingrediente>
+            <ingrediente>Molho Caesar</ingrediente>
+            <ingrediente>Peito de frango grelhado (opcional)</ingrediente>
+            <ingrediente>Sal</ingrediente>
+            <ingrediente>Pimenta</ingrediente>
+        </ingredientes>
+        <preco>20.00</preco>
+        <calorias>350</calorias>
+        <tempoPreparo>15 minutos</tempoPreparo>
+    </prato>
+</cardapio>

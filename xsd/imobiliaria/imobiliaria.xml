@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<imobiliaria xmlns="http://imobiliaria.org"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://imobiliaria.org imobiliaria.xsd">
+
+        <imovel>
+                <descricao>Aconchegante apartamento no centro da cidade, próximo a todas as comodidades.</descricao>
+                <proprietario>
+                        <nome>João Silva</nome>
+                        <telefone>(11) 98765-4321</telefone>
+                        <telefone>(11) 94321-4321</telefone>
+                        <email>joao.silva@example.com</email>
+                </proprietario>
+                <endereco>
+                        <rua>Rua das Flores</rua>
+                        <bairro>Centro</bairro>
+                        <cidade>São Paulo</cidade>
+                        <numero>101</numero>
+                </endereco>
+                <caracteristicas>
+                        <tamanho>80</tamanho>
+                        <numQuartos>2</numQuartos>
+                        <numBanheiros>1</numBanheiros>
+                </caracteristicas>
+                <valor>350000</valor>
+        </imovel>
+
+        <imovel>
+                <descricao>Excelente casa com jardim e piscina, localizada em bairro tranquilo.</descricao>
+                <proprietario>
+                        <nome>Maria Oliveira</nome>
+                        <telefone>(21) 99876-5432</telefone>
+                        <email>maria.oliveira@example.com</email>
+                </proprietario>
+                <endereco>
+                        <rua>Avenida Brasil</rua>
+                        <bairro>Barra da Tijuca</bairro>
+                        <cidade>Rio de Janeiro</cidade>
+                        <numero>250</numero>
+                </endereco>
+                <caracteristicas>
+                        <tamanho>250.00</tamanho>
+                        <numQuartos>4</numQuartos>
+                        <numBanheiros>3</numBanheiros>
+                </caracteristicas>
+                <valor>900000</valor>
+        </imovel>
+
+        <imovel>
+                <descricao>Moderno estúdio em área revitalizada, ideal para jovens profissionais.</descricao>
+                <proprietario>
+                        <nome>Carlos Souza</nome>
+                        <telefone>(31) 91234-5678</telefone>
+                        <email>carlos.souza@example.com</email>
+                </proprietario>
+                <endereco>
+                        <rua>Rua das Acácias</rua>
+                        <bairro>Savassi</bairro>
+                        <cidade>Belo Horizonte</cidade>
+                        <numero>58</numero>
+                </endereco>
+                <caracteristicas>
+                        <tamanho>45</tamanho>
+                        <numQuartos>1</numQuartos>
+                        <numBanheiros>1</numBanheiros>
+                </caracteristicas>
+                <valor>220000</valor>
+        </imovel>
+
+        <imovel>
+                <descricao>Casa espaçosa com área gourmet e churrasqueira, perfeita para famílias.</descricao>
+                <proprietario>
+                        <nome>Fernanda Lima</nome>
+                        <telefone>(51) 92345-6789</telefone>
+                        <email>fernanda.lima@example.com</email>
+                </proprietario>
+                <endereco>
+                        <rua>Rua do Sol</rua>
+                        <bairro>Jardim Botânico</bairro>
+                        <cidade>Porto Alegre</cidade>
+                        <numero>77</numero>
+                </endereco>
+                <caracteristicas>
+                        <tamanho>180</tamanho>
+                        <numQuartos>3</numQuartos>
+                        <numBanheiros>2</numBanheiros>
+                </caracteristicas>
+                <valor>60000</valor>
+        </imovel>
+
+        <imovel>
+                <descricao>Amplo apartamento com vista para o mar, em condomínio com infraestrutura completa.</descricao>
+                <proprietario>
+                        <nome>Ricardo Martins</nome>
+                        <telefone>(81) 98123-4567</telefone>
+                        <email>ricardo.martins@example.com</email>
+                </proprietario>
+                <endereco>
+                        <rua>Rua da Praia</rua>
+                        <bairro>Pina</bairro>
+                        <cidade>Recife</cidade>
+                        <numero>300</numero>
+                </endereco>
+                <caracteristicas>
+                        <tamanho>120</tamanho>
+                        <numQuartos>3</numQuartos>
+                        <numBanheiros>2</numBanheiros>
+                </caracteristicas>
+                <valor>850.000</valor>
+        </imovel>
+</imobiliaria>
