@@ -2,7 +2,6 @@ from zeep import Client
 
 wsdl_url = "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL"
 client = Client(wsdl=wsdl_url)
-
 # Lista as funções disponíveis
 available_funcs = {
 	"CapitalCity": client.service.CapitalCity,
