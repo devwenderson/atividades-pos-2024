@@ -2,5 +2,8 @@
 {% block title %} Login OAuth SUAP {% endblock %}
 
 {% block content %}
-    <p><a href="{{url_for('login')}}">Login</a></p>
+    <div class="container">
+        <h1>Faça login para acessar seus dados do SUAP</h1>
+        <a href="{{ url_for('login') }}" class="btn btn-success">Login</a>
+    </div>
 {% endblock %}

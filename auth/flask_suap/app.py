@@ -13,7 +13,7 @@ if (os.path.isfile(".env")):
 
 oauth.register(
     name='suap',
-    client_id='Gz25p2pWpah1l28mlBfdrAQs1H9HGjeaVaGuMPRA',
+    client_id=os.getenv("CLIENT_ID"),
     client_secret=os.getenv("CLIENT_SECRET"),
     api_base_url='https://suap.ifrn.edu.br/api/',
     request_token_url=None,
@@ -36,7 +36,6 @@ def index():
 @app.route('/login')
 def login():
     redirect_uri = url_for('auth', _external=True)
-    print(redirect_uri)
     return oauth.suap.authorize_redirect(redirect_uri)
 
 
