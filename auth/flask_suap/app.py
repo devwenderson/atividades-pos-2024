@@ -1,33 +1,24 @@
 from flask import Flask, redirect, url_for, session, request, jsonify, render_template
 from authlib.integrations.flask_client import OAuth
-from dotenv import load_dotenv
-import os
+from views.main import oauthRegister, User
 
 app = Flask(__name__)
 app.debug = True
 app.secret_key = 'development'
 oauth = OAuth(app)
-
-if (os.path.isfile(".env")):
-    load_dotenv()
-
-oauth.register(
-    name='suap',
-    client_id=os.getenv("CLIENT_ID"),
-    client_secret=os.getenv("CLIENT_SECRET"),
-    api_base_url='https://suap.ifrn.edu.br/api/',
-    request_token_url=None,
-    access_token_method='POST',
-    access_token_url='https://suap.ifrn.edu.br/o/token/',
-    authorize_url='https://suap.ifrn.edu.br/o/authorize/',
-    fetch_token=lambda: session.get('suap_token')
-)
-
+oauthRegister(oauth, 
+              name = "suap", 
+              api_base_url="https://suap.ifrn.edu.br/api/", 
+              request_token_url=None, 
+              access_token_method="POST", 
+              access_token_url="https://suap.ifrn.edu.br/o/token/", 
+              authorize_url="https://suap.ifrn.edu.br/o/authorize/", token="suap_token")
 
 @app.route('/')
 def index():
     if 'suap_token' in session:
-        meus_dados = oauth.suap.get('v2/minhas-informacoes/meus-dados')
+        user = User(oauth)
+        meus_dados = user.fetchUserDados()
         return render_template('user.html', user_data=meus_dados.json())
     else:
         return render_template('index.html')
@@ -51,5 +42,13 @@ def auth():
     session['suap_token'] = token
     return redirect(url_for('index'))
 
+@app.route("/boletim")
+def boletim():
+    user = User(oauth)
+    data  = user.fetchUserDados()
+    return render_template()
+
 if __name__ == "__main__":
     app.run()
+    
+    

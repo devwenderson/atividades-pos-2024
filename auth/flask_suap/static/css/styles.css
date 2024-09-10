@@ -155,11 +155,11 @@ a.sidebar-link:hover {
 /* navbar */
 
 .logo {
-    color: #FCA612;
+  color: #fca612;
 }
 
 .logo:hover {
-    color: #4474A7;
+  color: #4474a7;
 }
 
 .navbar-bg-color {
@@ -167,12 +167,30 @@ a.sidebar-link:hover {
 }
 
 .btn-nav {
-    color: #fafbfe;
-    font-family: "Poppins", system-ui;
-    font-weight: 500;
-    font-style: normal;
+  color: #fafbfe;
+  font-family: "Poppins", system-ui;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .btn-nav:hover {
-    color: #FCA612;
+  color: #fca612;
+}
+
+/* user.html */
+
+.user-infos {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-image {
+  border: #0e2238 3px solid;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.user-options {
+  margin-top: 50px;
 }
