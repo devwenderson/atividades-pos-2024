@@ -5,20 +5,20 @@
                 <i class="lni lni-menu"></i>
             </button>
             <div class="sidebar-logo">
-                <a href="#">{{ user_data['nome_usual'] }}</a>
+                <a href="#"></a>
             </div>
         </div>
         <ul class="sidebar-nav">
             <li class="sidebar-item">
-                <a href="#" class="sidebar-link">
-                    <img src="{{ user_data['url_foto_150x200'] }}" id="user_avatar" alt="foto">
-                    <span>{{ user_data['nome_usual'] }}</span>
+                <a href="{{ url_for('index') }}" class="sidebar-link">
+                    <img src="" id="user_avatar" alt="foto">
+                    <span></span>
                 </a>
             </li>
             <li class="sidebar-item">
-                <a href="#" class="sidebar-link">
+                <a href="{{ url_for('boletim') }}" class="sidebar-link">
                     <i class="lni lni-agenda"></i>
-                    <span>Task</span>
+                    <span>Boletim</span>
                 </a>
             </li>
             <li class="sidebar-item">

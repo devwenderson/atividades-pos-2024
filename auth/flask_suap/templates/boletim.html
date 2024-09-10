@@ -3,12 +3,47 @@
 {% block title %} Boletim {% endblock %}
 
 {% block content %}
-    <div class="user-infos">
-        <img src="{{ user_data['url_foto_150x200'] }}" class="user-image" alt="foto" />
-        <h2 class="user-name">{{ user_data['vinculo']['nome'] }}</h2>
-    </div>
+   
+    {% if data %}
+    <div>
+        <div class="search">
+            <form action="{{ url_for('boletim') }}" method="get">
+                <label>Ano letivo</label>
+                <input type="number" name="ano_letivo">
+    
+                <button type="submit">Selecionar</button>
+            </form>
+        </div>  
+        
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Disciplina</th>
+                    <th>Média final</th>
+                    <th>Situação</th>
+                </tr>
+            </thead>
 
-    <div class="user-options">
-        <a href="#" class="btn btn-primary">Ver boletim</a>
+            <tbody>
+                {% for item in data %}
+                    <tr>
+                        <td>{{ item["disciplina"] }}</td>
+                        <td>{{ item["media_final_disciplina"] }}</td>
+                        <td>{{ item["situacao"] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
     </div>
+    {% else %}
+        <h3>Selecione o ano letivo</h3>
+        <form action="{{ url_for('boletim') }}" method="get">
+            <label>Ano letivo</label>
+            <input type="number" name="ano_letivo">
+
+            <button type="submit">Selecionar</button>
+        </form>
+    {% endif %}
+    
 {% endblock %}

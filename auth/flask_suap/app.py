@@ -18,8 +18,8 @@ oauthRegister(oauth,
 def index():
     if 'suap_token' in session:
         user = User(oauth)
-        meus_dados = user.fetchUserDados()
-        return render_template('user.html', user_data=meus_dados.json())
+        data = user.fetchUserDados()
+        return render_template('user.html', data=data.json())
     else:
         return render_template('index.html')
 
@@ -42,11 +42,14 @@ def auth():
     session['suap_token'] = token
     return redirect(url_for('index'))
 
-@app.route("/boletim")
+@app.route("/boletim", methods=["GET"])
 def boletim():
     user = User(oauth)
-    data  = user.fetchUserDados()
-    return render_template()
+    if (request.args.get('ano_letivo')):
+        ano_letivo = request.args.get('ano_letivo')
+        data  = user.fetchUserBoletim(ano_letivo)
+        return render_template("boletim.html", data=data.json())
+    return render_template("boletim.html")
 
 if __name__ == "__main__":
     app.run()
