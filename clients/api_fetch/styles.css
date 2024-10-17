@@ -44,7 +44,19 @@
 
 /* POKEMONS INFO CLASSES */
 
+#lista-pokemons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
 
+.pokemon {
+    width: 100px;
+    height: 200px;
+}
+
+.pokemon-img {
+    width: 100px;
+}
 
 /* CSS FOR POKE TYPES */
 .normal {
