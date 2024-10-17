@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 :root {
+    --box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, .25);
+
     --clr-black: #1c1c1c;
     --clr-gray: #ececec;
     --clr-white: #f7f7f7;
+    --clr-red: #f34138;
     --type-normal: #A8A878;
     --type-fire: #F08030;
     --type-water: #6890F0;
@@ -30,12 +33,21 @@
     font-family: "Rubik", sans-serif;
 }
 
+body {
+    background: var(--clr-gray);
+}
+
 .button {
     border: none;
     margin: 2px;
     border-radius: 10px;
     padding: 5px 20px;
     text-transform: uppercase;
+}
+
+header {
+    box-shadow: var(--box-shadow);
+    margin-bottom: 50px;
 }
 
 #nav {
@@ -46,16 +58,63 @@
 
 #lista-pokemons {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 1em;
+}
+
+@media screen and (min-width: 470px) {
+    #lista-pokemons {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    #lista-pokemons {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 .pokemon {
-    width: 100px;
-    height: 200px;
+    border-radius: 1rem;
+    background-color: var(--clr-white);
+    box-shadow: var(--box-shadow);
+    padding-block: 1rem;
+    text-transform: uppercase;
+}
+
+.pokemon-img-container {
+    display: flex;
+    justify-content: center;
 }
 
 .pokemon-img {
     width: 100px;
+}
+
+.pokemon-name-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pokemon-id {
+    background-color: var(--clr-gray);
+    padding: .25rem .5rem;
+    border-radius: 20px;
+    font-size: .75rem;
+    font-weight: 500;
+}
+
+.pokemon-types {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.type {
+    padding: .75rem;
+    font-size: 14px;
+    border-radius: 20px;
 }
 
 /* CSS FOR POKE TYPES */
