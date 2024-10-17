@@ -1,42 +1,43 @@
-async function fetchMarcasData() {
+var pokemon_atual = 1
+async function fetchPokemonsData(id_pokemon) {
     try {
-        const response = await fetch('https://parallelum.com.br/fipe/api/v1/carros/marcas');
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id_pokemon}`);
+        // Tratamento de erro
+        if (!response.ok) {
+            throw new Error("Erro: " + response.status )
+        }
         const data = await response.json();
-
-        tableBodyMarcas = document.getElementById("table-body-marcas");
-        data.forEach(marca => {
-            tableMarcasItem = document.createElement('tr');
-            tableMarcasItem.innerHTML = `
-                <th>${marca.codigo}</th>
-                <td>${marca.nome}</td>
-                <td>
-                    <button onclick=fetchModelosDaMarca(${marca.codigo})>Modelos</button>
-                </td>
-            `;
-            tableBodyMarcas.appendChild(tableMarcasItem);
-        });
+        // console.log(data);
     } catch (error) {
-
+        console.log("Erro: ", error)
     }
 };
 
-async function fetchModelosDaMarca(id_marca) {
+async function fetchTypesData() {
     try {
-        const response = await fetch(`https://parallelum.com.br/fipe/api/v1/carros/marcas/${id_marca}/modelos`);
+        const response = await fetch(`https://pokeapi.co/api/v2/type/`);
+        // Tratamento de erro
+        if (!response.ok) {
+            throw new Error("Erro: " + response.status )
+        }
         const data = await response.json();
-        // context = {
-        //     marca: ""
-        // }
-        localStorage.setItem('modelos', JSON.stringify(data.modelos))
-        window.location.href = 'modelos.html'
-        
-    } catch (error) {
 
+        // Cria filtro de busca por tipo de pokemon
+        let searchByTypeElement = document.getElementById("search-by-type");
+        data.results.forEach(type => {
+            let searchOption = document.createElement("option");
+            searchOption.innerHTML = `
+                <option value="${type.name}">${type.name}</option>
+            `;
+            searchByTypeElement.appendChild(searchOption);
+        });
+        console.log(data.results);
+    } catch (error) {
+        console.log("Erro: ", error)
     }
 }
 
 window.onload = () => {
-    fetchMarcasData();
-    // fetchCarrosdata(59);
+    fetchTypesData();
 }
 
