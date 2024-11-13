@@ -1,6 +1,6 @@
 import React from 'react';
 import { useFetchPokemons } from './useFetchPokemon'; // Importando o hook
-import './PokemonList.module.css';
+import styles from './PokemonList.module.css';
 
 // Função para capitalizar o nome do Pokémon (primeira letra maiúscula)
 function capitalize(str) {
@@ -8,7 +8,7 @@ function capitalize(str) {
 }
 
 function PokemonList() {
-  const { pokemonsData, isLoading, error } = useFetchPokemons(120);
+  const { pokemonsData, isLoading, error } = useFetchPokemons(151);
 
   if (isLoading) {
     return <p>Carregando Pokémons...</p>;
@@ -34,31 +34,33 @@ function PokemonList() {
   };
 
   return (
-    <div className="pokemon-list">
-      <div className="pokemon-grid">
+    <div className={styles['pokemon-list']}> {/* Usando o CSS Module */}
+      <div className={styles['pokemon-grid']}> {/* Usando o CSS Module */}
         {pokemonsData.map((pokemon) => {
           const pokeId = formatPokeId(pokemon.id);
           const pokeTypes = pokemon.types.map((type) => (
-            <p key={type.type.name} className={`${type.type.name} type`}>{type.type.name}</p>
+            <p key={type.type.name} className={`${styles[type.type.name]} ${styles.type}`}> {/* Usando classes do CSS Module */}
+              {type.type.name}
+            </p>
           ));
 
           return (
-            <div key={pokemon.id} className="pokemon">
-              <div className="pokemon-infos">
-                <div className="pokemon-img-container">
+            <div key={pokemon.id} className={styles.pokemon}>
+              <div className={styles['pokemon-infos']}>
+                <div className={styles['pokemon-img-container']}>
                   <img 
                     src={pokemon.sprites.versions['generation-v']['black-white']['animated']['front_default']} 
                     alt={pokemon.name} 
-                    className="pokemon-img"
+                    className={styles['pokemon-img']}
                   />
                 </div>
 
-                <div className="pokemon-name-container">
-                  <p className="pokemon-id">#{pokeId}</p>
-                  <h4 className="pokemon-name">{capitalize(pokemon.name)}</h4>
+                <div className={styles['pokemon-name-container']}>
+                  <p className={styles['pokemon-id']}>#{pokeId}</p> 
+                  <h4 className={styles['pokemon-name']}>{capitalize(pokemon.name)}</h4> 
                 </div>
 
-                <div className="pokemon-types">
+                <div className={styles['pokemon-types']}> {/* Usando o CSS Module */}
                   {pokeTypes}
                 </div>
               </div>
