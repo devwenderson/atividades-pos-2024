@@ -53,9 +53,20 @@ header {
 
 /* POKEMONS INFO CLASSES */
 
-#lista-pokemons {
+.pokemon-infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.pokemon-list {
+  margin-top: 50px;
+}
+
+.pokemon-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1em;
 }
 
@@ -85,7 +96,7 @@ header {
 }
 
 .pokemon-img {
-  width: 100px;
+  height: 80px;
 }
 
 .pokemon-name-container {
