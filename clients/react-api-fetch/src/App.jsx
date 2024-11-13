@@ -1,4 +1,5 @@
 import MyNavbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import { Outlet } from "react-router-dom";
 import './App.css'
 
@@ -9,6 +10,7 @@ function App() {
       <div className="container mx-auto">
         <Outlet />
       </div>
+      <Footer />
     </div>
   )
 }
