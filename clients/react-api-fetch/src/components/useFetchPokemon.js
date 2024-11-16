@@ -8,7 +8,7 @@ function handleRequestError(response) {
 }
 
 // Hook customizado para buscar dados de múltiplos Pokémons
-export function useFetchPokemons(limit = 120) {
+export function useFetchPokemons(limit) {
   const [pokemonsData, setPokemonsData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);

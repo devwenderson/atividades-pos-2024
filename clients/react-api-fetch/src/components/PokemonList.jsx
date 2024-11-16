@@ -11,7 +11,11 @@ function PokemonList() {
   const { pokemonsData, isLoading, error } = useFetchPokemons(151);
 
   if (isLoading) {
-    return <p>Carregando Pokémons...</p>;
+    return (
+      <div className={styles['loading-message-container']}>
+        <p className={styles['loading-message']}>Carregando Pokémons...</p>
+      </div>
+    );
   }
 
   if (error) {
@@ -34,8 +38,8 @@ function PokemonList() {
   };
 
   return (
-    <div className={styles['pokemon-list']}> {/* Usando o CSS Module */}
-      <div className={styles['pokemon-grid']}> {/* Usando o CSS Module */}
+    <div className={styles['pokemon-list']}>
+      <div className={styles['pokemon-grid']}>
         {pokemonsData.map((pokemon) => {
           const pokeId = formatPokeId(pokemon.id);
           const pokeTypes = pokemon.types.map((type) => (

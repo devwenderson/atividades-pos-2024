@@ -1,3 +1,45 @@
+:root {
+    --box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, .25);
+  
+    --clr-black: #1c1c1c;
+    --clr-gray: #ececec;
+    --clr-white: #f7f7f7;
+    --clr-red: #f34138;
+    --type-normal: #A8A878;
+    --type-fire: #F08030;
+    --type-water: #6890F0;
+    --type-grass: #78C850;
+    --type-electric: #F8D030;
+    --type-ice: #98D8D8;
+    --type-fighting: #C03028;
+    --type-poison: #A040A0;
+    --type-ground: #E0C068;
+    --type-flying: #A890F0;
+    --type-psychic: #F85888;
+    --type-bug: #A8B820;
+    --type-rock: #B8A038;
+    --type-ghost: #705898;
+    --type-dark: #705848;
+    --type-dragon: #7038F8;
+    --type-steel: #B8B8D0;
+    --type-fairy: #F0B6BC;
+  }
+
+.loading-message-container {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-message {
+    font-weight: 700;
+    font-size: 28px;
+    background-color: var(--clr-white);
+    padding: 20px 50px;
+    border-radius: 20px;
+}
+
 /* POKEMONS INFO CLASSES */
 
 .pokemon-infos {
