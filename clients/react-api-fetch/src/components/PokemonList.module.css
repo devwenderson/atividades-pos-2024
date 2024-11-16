@@ -1,6 +1,6 @@
 :root {
     --box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, .25);
-  
+
     --clr-black: #1c1c1c;
     --clr-gray: #ececec;
     --clr-white: #f7f7f7;
@@ -23,7 +23,7 @@
     --type-dragon: #7038F8;
     --type-steel: #B8B8D0;
     --type-fairy: #F0B6BC;
-  }
+}
 
 .loading-message-container {
     height: 80vh;
@@ -38,6 +38,15 @@
     background-color: var(--clr-white);
     padding: 20px 50px;
     border-radius: 20px;
+}
+
+.error-message-container {
+    height: 60vh;
+}
+
+.error-message {
+    font-size: 36px;
+    color: var(--clr-red);
 }
 
 /* POKEMONS INFO CLASSES */
@@ -204,4 +213,24 @@
 .fairy {
     background-color: var(--type-fairy);
     color: var(--clr-black);
+}
+
+.all {
+    background-color: #98D8D8;
+}
+
+.filter-container {
+    margin-bottom: 20px;
+}
+
+.button-group {
+    width: auto;
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+}
+
+.filterButton {
+    border-radius: 10px;
+    padding: 5px 20px;
 }

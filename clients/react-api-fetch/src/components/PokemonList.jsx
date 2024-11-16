@@ -1,5 +1,5 @@
-import React from 'react';
-import { useFetchPokemons } from './useFetchPokemon'; // Importando o hook
+import React, { useState } from 'react';
+import { useFetchPokemons } from './useFetchPokemon';
 import styles from './PokemonList.module.css';
 
 // Função para capitalizar o nome do Pokémon (primeira letra maiúscula)
@@ -9,6 +9,7 @@ function capitalize(str) {
 
 function PokemonList() {
   const { pokemonsData, isLoading, error } = useFetchPokemons(151);
+  const [selectedType, setSelectedType] = useState('all');
 
   if (isLoading) {
     return (
@@ -37,13 +38,65 @@ function PokemonList() {
     return pokeId;
   };
 
+  const handleTypeChange = (e) => {
+    setSelectedType(e.target.value);
+  };
+
+  // Filtragem dos pokémons pelo tipo selecionado
+  const filteredPokemons = pokemonsData.filter((pokemon) => {
+    if (selectedType === 'all') {
+      return true
+    };
+    return pokemon.types.some((type) => type.type.name === selectedType);
+  });
+
+  const types = [
+    { value: 'all', label: 'Todos' },
+    { value: 'normal', label: 'Normal' },
+    { value: 'fire', label: 'Fogo' },
+    { value: 'water', label: 'Água' },
+    { value: 'grass', label: 'Grama' },
+    { value: 'electric', label: 'Elétrico' },
+    { value: 'ice', label: 'Gelo' },
+    { value: 'fighting', label: 'Luta' },
+    { value: 'poison', label: 'Venenoso' },
+    { value: 'ground', label: 'Terra' },
+    { value: 'flying', label: 'Voador' },
+    { value: 'psychic', label: 'Psíquico' },
+    { value: 'bug', label: 'Inseto' },
+    { value: 'rock', label: 'Pedra' },
+    { value: 'ghost', label: 'Fantasma' },
+    { value: 'dark', label: 'Sombrio' },
+    { value: 'dragon', label: 'Dragão' },
+    { value: 'steel', label: 'Aço' },
+    { value: 'fairy', label: 'Fada' }
+  ];
+
   return (
     <div className={styles['pokemon-list']}>
+      {/* Menu de Botões para Filtro por Tipo */}
+      <div className={styles['filter-container']}>
+        <div className={styles['button-group']}>
+          {types.map((type) => (
+            <button
+              onClick={() => setSelectedType(type.value)}
+              className={`${styles[type.value]} ${styles.filterButton} ${selectedType === type.value ? styles.selected : ''}`}
+            >
+              {type.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
       <div className={styles['pokemon-grid']}>
-        {pokemonsData.map((pokemon) => {
+        {filteredPokemons.length === 0 ? (
+          <div className={styles['error-message-container']}>
+            <p className={styles['error-message']}>Pokemons não encontrados</p>
+          </div>
+        ) : filteredPokemons.map((pokemon) => {
           const pokeId = formatPokeId(pokemon.id);
           const pokeTypes = pokemon.types.map((type) => (
-            <p key={type.type.name} className={`${styles[type.type.name]} ${styles.type}`}> {/* Usando classes do CSS Module */}
+            <p key={type.type.name} className={`${styles[type.type.name]} ${styles.type}`}>
               {type.type.name}
             </p>
           ));
@@ -52,19 +105,19 @@ function PokemonList() {
             <div key={pokemon.id} className={styles.pokemon}>
               <div className={styles['pokemon-infos']}>
                 <div className={styles['pokemon-img-container']}>
-                  <img 
-                    src={pokemon.sprites.versions['generation-v']['black-white']['animated']['front_default']} 
-                    alt={pokemon.name} 
+                  <img
+                    src={pokemon.sprites.versions['generation-v']['black-white']['animated']['front_default']}
+                    alt={pokemon.name}
                     className={styles['pokemon-img']}
                   />
                 </div>
 
                 <div className={styles['pokemon-name-container']}>
-                  <p className={styles['pokemon-id']}>#{pokeId}</p> 
-                  <h4 className={styles['pokemon-name']}>{capitalize(pokemon.name)}</h4> 
+                  <p className={styles['pokemon-id']}>#{pokeId}</p>
+                  <h4 className={styles['pokemon-name']}>{capitalize(pokemon.name)}</h4>
                 </div>
 
-                <div className={styles['pokemon-types']}> {/* Usando o CSS Module */}
+                <div className={styles['pokemon-types']}>
                   {pokeTypes}
                 </div>
               </div>

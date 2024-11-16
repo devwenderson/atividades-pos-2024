@@ -19,7 +19,6 @@ export function useFetchPokemons(limit) {
         setIsLoading(true);
         setError(null);
 
-        // Requisição para pegar os 120 primeiros Pokémons (IDs de 1 a 120)
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}`);
         
         handleRequestError(response);
@@ -29,6 +28,7 @@ export function useFetchPokemons(limit) {
         const detailedPokemons = await Promise.all(
           results.map(async (pokemon) => {
             const res = await fetch(pokemon.url);
+            console.log(res)
             handleRequestError(res);
             return res.json();
           })
